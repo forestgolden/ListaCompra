@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+    {% for tipo_item in tipo_itens %}
+        <li>
+            <a href="{% url 'autalizar_tipo_item' tipo_item.id %}"> {{ tipo_item.tipo_nome }} </a>
+            <a href="{% url 'excluir_tipo_item' tipo_item.id %}"> Deletar </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+<a href="{% url 'novo_tipo_item' %}"> Novo Cliente</a>
+</body>
+</html>
